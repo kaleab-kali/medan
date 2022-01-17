@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meda app</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Helvetica;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        margin: 0;
+        height: 150px;
+      }
+
+      h1 {
+        text-transform: capitalize;
+      }
+
+      h2,
+      h1 {
+        letter-spacing: 1px;
+      }
+
+      div {
+        overflow-x: auto;
+        margin: 10px 70px 70px;
+      }
+
+      img {
+        float: left;
+      }
+
+      table {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid rgb(58, 59, 61);
+        border-collapse: collapse;
+      }
+
+      #coRow1 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      td {
+        text-align: center;
+        border: 1px solid;
+      }
+
+      thead th {
+        color: #ffffff;
+        background: #4fc3a1;
+      }
+
+      thead th:nth-child(odd) {
+        color: #ffffff;
+        background: #324960;
+      }
+
+      thead th:nth-child(2) {
+        width: 35%;
+      }
+      .container {
+          background-color: rgb(182, 131, 169);
+        }
+        #last {
+            background-color:black;
+        }
+    </style>
+  </head>
+
+  <body>
+    <img src="logomed.png" alt="logo" width="200px" height="150px" />
+    <header>
+      <h1>key performance indicator for meda healthcare app</h1>
+      <h2>
+        for evaluation and decision purpose to critical assess the app condition
+        this are the measurement taken
+      </h2>
+    </header>
+    <hr />
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Objectives</th>
+            <th>performance indicators</th>
+            <th>division weight</th>
+            <th>comparative weight</th>
+            <th>performance measurement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="coRow1" rowspan="10">
+              health care facilities(clinics, hospitals, local health centers)performance
+            </th>
+            <td>treatment cost</td>
+            <td>15%</td>
+            <td rowspan="10">out of 100% to rank hospitals</td>
+            <td>$</td>
+          </tr>
+          <tr>
+            <td>Admission rate</td>
+            <td>20%</td>
+            <td>%</td>
+          </tr>
+          <tr>
+            <td>Readmission rate</td>
+            <td>9%</td>
+            <td>%</td>
+          </tr>
+          <tr>
+            <td>cancellation rate</td>
+            <td>10%</td>
+            <td>%</td>
+          </tr>
+          <tr>
+            <td>error rate</td>
+            <td>13%</td>
+            <td>%</td>
+          </tr>
+          <tr>
+            <td>average patient wait time</td>
+            <td>6%</td>
+            <td>@</td>
+          </tr>
+          <tr>
+            <td>room turnover</td>
+            <td>6%</td>
+            <td>#</td>
+          </tr>
+          <tr>
+            <td>staff to patient ratio</td>
+            <td>5%</td>
+            <td>#</td>
+          </tr>
+          <tr>
+            <td>patient confidentiality break</td>
+            <td>12%</td>
+            <td>#</td>
+          </tr>
+          <tr>
+            <td>partnership with other organization</td>
+            <td>4%</td>
+            <td>#</td>
+          </tr>
+
+          <tr>
+            <td id="colRow2" rowspan="7"><b>Usage performance by user</b></td>
+            <td>monthly active users</td>
+            <td>16%</td>
+            <td rowspan="7"> in % for analytics for usage and decision making</td>
+            <td>#</td>
+          </tr>
+          <tr>
+            <td>daily active users</td>
+            <td>22%</td>
+           
+            <td>#</td>
+          </tr>
+          <tr>
+            <td>Daily session per daily active user</td>
+            <td>15%</td>
+            <td>#</td>
+          </tr>
+
+          <tr>
+            <td>average session length of the user</td>
+            <td>13%</td>
+            <td>@</td>
+          </tr>
+          <tr>
+            <td>retention rate</td>
+            <td>18%</td>
+            <td>%</td>
+          </tr>
+          <tr>
+            <td>churn rate</td>
+            <td>10%</td>
+            <td>%</td>
+          </tr>
+          <tr>
+            <td>cost per acquisition(marketing)</td>
+            <td>6%</td>
+            <td>$</td>
+          </tr>
+          
+          <tr>
+            <td id="colRow3" rowspan="8"><b>App technical performance</b></td>
+            <td>load speed</td>
+            <td>21%</td>
+            <td rowspan="8">  in % for analytics and app improvement</td>
+            <td>@</td>
+          </tr>
+          <tr>
+            <td>average screen resolution used by user for optimization</td>
+            <td>8%</td>
+            <td>px</td>
+          </tr>
+          <tr>
+            <td>crash cause</td>
+            <td>11%</td>
+            <td>predefined list of possibilities</td>
+          </tr>
+          <tr>
+            <td>crash time duration </td>
+            <td>14%</td>
+            <td>$</td>
+          </tr>
+          <tr>
+            <td>Request Rate</td>
+            <td>18%</td>
+            <td>%</td>
+          </tr>
+          <tr>
+            <td>Application & Server CPU processing</td>
+            <td>12%</td>
+            <td>%</td>
+          </tr>
+          <tr>
+            <td>Application Availability</td>
+            <td>16%</td>
+            <td>%</td>
+          </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td id="last" colspan="5"></td>
+            </tr>
+            <tr>
+                <td colspan="5">key for symbols in the table</td>
+                
+            </tr>
+            <tr>
+                <th colspan="5"> # for measure in number</th>
+            </tr>
+            <tr>
+                <th colspan="5"> $ for measure in money(birr)</th>
+            </tr>
+            <tr>
+                <th colspan="5"> @ for measure in Time(minute)</th>
+            </tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>
