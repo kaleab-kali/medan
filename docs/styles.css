@@ -1,12 +1,12 @@
 :root {
     --color-bg: #FEFDFB;
     --color-title: #0E1C4E;
-    --color-summary-1: #FFF6EE;
-    --color-summary-1-highlight: #FFC48B;
-    --color-summary-2: #FAFAFF;
-    --color-summary-2-highlight: #B4B3FF;
-    --color-summary-3: #FFF0F3;
-    --color-summary-3-highlight: #FFB3C0;
+    --color-summary-1: #e2d3c5;
+    --color-summary-1-highlight: #0be24c;
+    --color-summary-2: #c9c9e6;
+    --color-summary-2-highlight: #c6f00e;
+    --color-summary-3: #d898a5;
+    --color-summary-3-highlight: #ee163a;
     /* --font-ibm-plex-sans: "IBM Plex Sans", sans-serif; */
 }
 
@@ -28,6 +28,7 @@ header {
     align-items: center;
     height: 9rem;
     font-style: bold;
+    background-color:antiquewhite;
 }
 
 .logo {
@@ -60,6 +61,7 @@ main h1 {
 .kpi-description {
     margin: 0;
     padding: 0.5rem;
+    background-color:antiquewhite;
 
 }
 
