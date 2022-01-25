@@ -301,7 +301,7 @@ span{
   .form-popup {
     display: none;
     position: absolute;
-    bottom: 5%;
+    bottom: 2%;
     right: 35rem;
     border: 3px solid rgb(0, 0, 0);
     border-radius: 5px;
