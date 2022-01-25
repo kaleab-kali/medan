@@ -153,17 +153,17 @@ input[type="submit"] {
 
 .objective-detail details.op1 {
     background: var(--color-summary-1);
-    border-left: 5px solid var(--color-summary-1-highlight);
+    border-left: 10px solid var(--color-summary-1-highlight);
 }
 
 .objective-detail details.op2 {
     background: var(--color-summary-2);
-    border-left: 5px solid var(--color-summary-2-highlight);
+    border-left: 10px solid var(--color-summary-2-highlight);
 }
 
 .objective-detail details.op3 {
     background: var(--color-summary-3);
-    border-left: 5px solid var(--color-summary-3-highlight);
+    border-left: 10px solid var(--color-summary-3-highlight);
 }
 
 .objective-detail details summary,
