@@ -299,7 +299,7 @@ span a:hover {
 .form-popup {
     display: none;
     position: absolute;
-    bottom: 2%;
+    bottom: 0%;
     right: 35rem;
     border: 3px solid rgb(0, 0, 0);
     border-radius: 5px;
