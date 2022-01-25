@@ -1,13 +1,12 @@
 :root {
     --color-bg: #FEFDFB;
     --color-title: #0E1C4E;
-    --color-summary-1: #FFF6EE;
-    --color-summary-1-highlight: #FFC48B;
-    --color-summary-2: #FAFAFF;
-    --color-summary-2-highlight: #B4B3FF;
-    --color-summary-3: #FFF0F3;
-    --color-summary-3-highlight: #FFB3C0;
-    /* --font-ibm-plex-sans: "IBM Plex Sans", sans-serif; */
+    --color-summary-1: #c2a993;
+    --color-summary-1-highlight: #0be24c;
+    --color-summary-2: #9696ce;
+    --color-summary-2-highlight: #c6f00e;
+    --color-summary-3: #d8697f;
+    --color-summary-3-highlight: #ee163a;
 }
 
 
@@ -21,12 +20,17 @@
 body {
     height: 100vh;
 }
+/* .container {
+    width: 100%;
+    position:relative;
+} */
 
 header {
     display: flex;
     align-items: center;
     height: 9rem;
     font-style: bold;
+    background-color:antiquewhite;
 }
 
 .logo {
@@ -55,10 +59,14 @@ main h1 {
     align-items: center;
     justify-content: center;
 }
+/* all container for the description
+=============================================== */
 
 .kpi-description {
     margin: 0;
     padding: 0.5rem;
+    background-color:antiquewhite;
+    /* position: relative; */
 
 }
 
@@ -75,16 +83,31 @@ main h1 {
     text-transform: uppercase;
 }
 
+/* container for the objectives
+========================================== */
 .objective {
-    max-width: 1200px;
+    max-width: 1300px;
     width: 100%;
-    box-shadow: 0 15px 15px rgba(31, 30, 30, 0.1);
+    margin-right: 1%;
+    margin-left: 1%;
+    box-shadow: 0 15px 15px rgba(19, 18, 18, 0.1);
+    
 }
 
 .title {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* objective details styles 
+==========================================*/
+.objective-detail details {
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 5px solid gray;
 }
 label {
     width: 250px;
@@ -93,8 +116,8 @@ label {
 }
 input {
     width : 150px;
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 select {
@@ -104,12 +127,17 @@ details h4 {
     margin: 1rem;
 }
 
-.objective-detail details {
-    border-radius: 4px;
-    overflow: hidden;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.05);
-    border-left: 5px solid gray;
+.form-indicator {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    /* background-color: rgb(212, 210, 51); */
+}
+.h40 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
 }
 
 .objective-detail details:not(:last-of-type) {
@@ -118,29 +146,27 @@ details h4 {
 
 .objective-detail details.op1 {
     background: var(--color-summary-1);
-    border-left: 5px solid var(--color-summary-1-highlight);
+    border-left: 10px solid var(--color-summary-1-highlight);
 }
 
 .objective-detail details.op2 {
     background: var(--color-summary-2);
-    border-left: 5px solid var(--color-summary-2-highlight);
+    border-left: 10px solid var(--color-summary-2-highlight);
 }
 
 .objective-detail details.op3 {
     background: var(--color-summary-3);
-    border-left: 5px solid var(--color-summary-3-highlight);
+    border-left: 10px solid var(--color-summary-3-highlight);
 }
 
-.objective-detail details summary,
-.objective-detail details p {
-    font-family: var(--font-ibm-plex-sans);
+.objective-detail details summary{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 18px;
     line-height: 1.4;
     color: var(--color-title);
 }
-
 .objective-detail details summary:not(:last-of-type),
 .objective-detail details p:not(:last-of-type) {
     margin-bottom: 10px;
@@ -165,6 +191,8 @@ details h4 {
     height: 16px;
     transform: translateY(2px);
 }
+/* details open states styles
+================================================= */
 
 .objective-detail details[open] summary {
     margin-bottom: 10px;
@@ -185,13 +213,45 @@ details h4 {
 .objective-detail details[open] p {
     padding-left: 32px;
 }
+/* objective-content 
+====================================*/
+.objective-content {
+    /* background-color: rgb(53, 50, 50); */
+    
+    margin: 0;
+}
+.objective-content p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight:bold;
+    font-size: 14px;
+    /* line-height: 1.4; */
+    /* color: black; */
+}
+.h40 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+/* add category button 
+===================================================*/
 .btn {
     margin-top: 10px;
     margin-bottom: 10px ;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.btn-o {
+    background-color: #0cf0ab;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
 }
 
 span{
@@ -235,4 +295,55 @@ span{
   }
   span a:hover{
     transform: translateZ(-25px) rotateX(-90deg);
+  }
+  /* pop up
+  ====================================== */
+  .form-popup {
+    display: none;
+    position: absolute;
+    bottom: 5%;
+    right: 35rem;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    z-index: 9;
+  }
+  .form-container {
+    max-width: 300px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid black
+  }
+  .form-container input[type=text], .form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  .form-container input[type=text]:focus,.form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  .form-container .btn {
+    background-color: rgb(0, 174, 255);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  .form-container .cancel {
+    background-color: rgb(209, 45, 45);
+  }
+  .slider {
+    -webkit-appearance: none;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
   }
