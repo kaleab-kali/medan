@@ -1,12 +1,13 @@
 :root {
     --color-bg: #FEFDFB;
     --color-title: #0E1C4E;
-    --color-summary-1: #c2a993;
-    --color-summary-1-highlight: #0be24c;
-    --color-summary-2: #9696ce;
-    --color-summary-2-highlight: #c6f00e;
-    --color-summary-3: #d8697f;
-    --color-summary-3-highlight: #ee163a;
+    --color-summary-1: #FFF6EE;
+    --color-summary-1-highlight: #FFC48B;
+    --color-summary-2: #FAFAFF;
+    --color-summary-2-highlight: #B4B3FF;
+    --color-summary-3: #FFF0F3;
+    --color-summary-3-highlight: #FFB3C0;
+    /* --font-ibm-plex-sans: "IBM Plex Sans", sans-serif; */
 }
 
 
@@ -15,22 +16,18 @@
 *::before {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     height: 100vh;
 }
-/* .container {
-    width: 100%;
-    position:relative;
-} */
 
 header {
     display: flex;
     align-items: center;
     height: 9rem;
     font-style: bold;
-    background-color:antiquewhite;
 }
 
 .logo {
@@ -59,23 +56,20 @@ main h1 {
     align-items: center;
     justify-content: center;
 }
-/* all container for the description
-=============================================== */
 
 .kpi-description {
     margin: 0;
     padding: 0.5rem;
-    background-color:antiquewhite;
-    /* position: relative; */
 
 }
 
 .kpi-description>p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
-    font-size: large;
+    font-size: 1.3rem;
     margin-right: 1rem;
     padding: 1rem 1rem;
+    font-style: italic;
 }
 
 .kpi-description h2 {
@@ -83,15 +77,10 @@ main h1 {
     text-transform: uppercase;
 }
 
-/* container for the objectives
-========================================== */
 .objective {
-    max-width: 1300px;
+    max-width: 1200px;
     width: 100%;
-    margin-right: 1%;
-    margin-left: 1%;
-    box-shadow: 0 15px 15px rgba(19, 18, 18, 0.1);
-    
+    box-shadow: 0 15px 15px rgba(31, 30, 30, 0.1);
 }
 
 .title {
@@ -100,32 +89,37 @@ main h1 {
     justify-content: center;
 }
 
-/* objective details styles 
-==========================================*/
-.objective-detail details {
-    border-radius: 4px;
-    overflow: hidden;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.05);
-    border-left: 5px solid gray;
-}
 label {
     width: 250px;
     display: inline-block;
+    font-size: 1.1em;
+    text-transform: capitalize;
     /* text-align: right; */
 }
-input {
-    width : 150px;
-    padding: 0;
+
+input,
+select {
+    width: 250px;
+    padding: 5px;
     margin: 0;
     box-sizing: border-box;
+    border-radius: 5px;
+    background-color: white;
 }
-select {
-    width : 150px;
+
+/* select {
+    width: 150px;
+} */
+input[type="submit"] {
+    background-color: #333;
+    color: white;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    text-align: center;
+    margin-left: 10rem;
 }
-details h4 {
-    margin: 1rem;
-}
+
+
 
 .form-indicator {
     display: flex;
@@ -138,7 +132,16 @@ details h4 {
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    margin: 20px;
 }
+.objective-detail details {
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 5px solid gray;
+}
+
 
 .objective-detail details:not(:last-of-type) {
     margin-bottom: 15px;
@@ -146,27 +149,29 @@ details h4 {
 
 .objective-detail details.op1 {
     background: var(--color-summary-1);
-    border-left: 10px solid var(--color-summary-1-highlight);
+    border-left: 5px solid var(--color-summary-1-highlight);
 }
 
 .objective-detail details.op2 {
     background: var(--color-summary-2);
-    border-left: 10px solid var(--color-summary-2-highlight);
+    border-left: 5px solid var(--color-summary-2-highlight);
 }
 
 .objective-detail details.op3 {
     background: var(--color-summary-3);
-    border-left: 10px solid var(--color-summary-3-highlight);
+    border-left: 5px solid var(--color-summary-3-highlight);
 }
 
-.objective-detail details summary{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.objective-detail details summary,
+.objective-detail details p {
+    font-family: var(--font-ibm-plex-sans);
     font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: normal;
+    font-size: 14px;
     line-height: 1.4;
     color: var(--color-title);
 }
+
 .objective-detail details summary:not(:last-of-type),
 .objective-detail details p:not(:last-of-type) {
     margin-bottom: 10px;
@@ -174,11 +179,14 @@ details h4 {
 
 .objective-detail details p {
     padding-left: 30px;
+    font-size: 1.07rem;
 }
 
 .objective-detail details summary {
     cursor: pointer;
     margin-bottom: 0;
+    font-size: 1.2rem;
+    font-weight: bolder;
     list-style-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.6066 12H1.3934' stroke='%23202842' stroke-width='1.875' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 1.39343V22.6066' stroke='%23202842' stroke-width='1.875' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 
@@ -191,8 +199,6 @@ details h4 {
     height: 16px;
     transform: translateY(2px);
 }
-/* details open states styles
-================================================= */
 
 .objective-detail details[open] summary {
     margin-bottom: 10px;
@@ -213,8 +219,7 @@ details h4 {
 .objective-detail details[open] p {
     padding-left: 32px;
 }
-/* objective-content 
-====================================*/
+
 .objective-content {
     /* background-color: rgb(53, 50, 50); */
     
@@ -228,51 +233,36 @@ details h4 {
     /* line-height: 1.4; */
     /* color: black; */
 }
-.h40 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-/* add category button 
-===================================================*/
 .btn {
     margin-top: 10px;
-    margin-bottom: 10px ;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.btn-o {
-    background-color: #0cf0ab;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-}
 
-span{
+span {
     position: relative;
     display: inline-flex;
     width: 180px;
     height: 55px;
     margin: 0 15px;
     perspective: 1000px;
-  }
-  span a{
+}
+
+span a {
     font-size: 19px;
     letter-spacing: 1px;
     transform-style: preserve-3d;
     transform: translateZ(-25px);
     transition: transform .25s;
     font-family: 'Montserrat', sans-serif;
-    
-  }
-  span a:before,
-  span a:after{
+
+}
+
+span a:before,
+span a:after {
     position: absolute;
     content: "ADD objectives";
     height: 55px;
@@ -283,22 +273,27 @@ span{
     border: 5px solid black;
     box-sizing: border-box;
     border-radius: 5px;
-  }
-  span a:before{
+}
+
+span a:before {
     color: #fff;
     background: #000;
     transform: rotateY(0deg) translateZ(25px);
-  }
-  span a:after{
+}
+
+span a:after {
     color: #000;
     transform: rotateX(90deg) translateZ(25px);
-  }
-  span a:hover{
+}
+
+span a:hover {
     transform: translateZ(-25px) rotateX(-90deg);
-  }
-  /* pop up
+}
+
+/* pop up
   ====================================== */
-  .form-popup {
+
+.form-popup {
     display: none;
     position: absolute;
     bottom: 2%;
@@ -306,38 +301,46 @@ span{
     border: 3px solid rgb(0, 0, 0);
     border-radius: 5px;
     z-index: 9;
-  }
-  .form-container {
+}
+
+.form-container {
     max-width: 300px;
     padding: 15px;
     background-color: white;
     border: 1px solid black
-  }
-  .form-container input[type=text], .form-container textarea {
+}
+
+.form-container input[type=text],
+.form-container textarea {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
     background: #f1f1f1;
-  }
-  .form-container input[type=text]:focus,.form-container textarea:focus {
+}
+
+.form-container input[type=text]:focus,
+.form-container textarea:focus {
     background-color: #ddd;
     outline: none;
-  }
-  .form-container .btn {
+}
+
+.form-container .btn {
     background-color: rgb(0, 174, 255);
     color: white;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
     width: 100%;
-    margin-bottom:10px;
+    margin-bottom: 10px;
     opacity: 0.8;
-  }
-  .form-container .cancel {
+}
+
+.form-container .cancel {
     background-color: rgb(209, 45, 45);
-  }
-  .slider {
+}
+
+.slider {
     -webkit-appearance: none;
     height: 10px;
     border-radius: 5px;
@@ -346,4 +349,4 @@ span{
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
-  }
+}
